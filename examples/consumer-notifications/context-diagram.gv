@@ -1,0 +1,120 @@
+digraph "Relationship Visualizer"
+{
+    splines=true;
+    imagepath="C:\claude\rv-kgf-context-diagram;C:\data\local\github\excel-to-graphviz-examples\dot\context-diagram-v11-1";
+    subgraph "cluster_1" { labelloc="top" fontname="Calibri" fontcolor="#5B9BD5" penwidth="2" fontsize="14" color="#B3B3B3" style="rounded" margin="12" label="System Context for Consumer Notifications Application"
+        subgraph legend_1 { rank="source"; "legend" };
+        legend [ shape="none" label=<<font face="Calibri" point-size="10">
+<table border="1" cellborder="0" cellspacing="1" color="#B3B3B3"><tr><td colspan="9" align="center" ><font point-size="14">Consumer Notifications</font></td></tr><tr>
+  <td colspan="3" align="center"><B>Actor</B></td>
+  <td colspan="3" align="center"><B>Application</B></td>
+  <td colspan="3" align="center"><B>Data Store</B></td>
+ </tr>
+ <tr>
+   <td bgcolor="#E6B8B7">  </td><td><img src="images/alarm.png" ></img></td><td align="left">Alarm</td>
+   <td bgcolor="#4F81BD">  </td><td><img src="images/cloud.png"></img></td><td align="left">Cloud</td>
+   <td bgcolor="#FFFFFF">  </td><td><img src="images/database.png"></img></td><td align="left">Database</td>
+  </tr>
+ <tr>
+  <td bgcolor="#CCC0DA">  </td><td><img src="images/robot.png"></img></td><td align="left">Bot / Robot</td>
+  <td bgcolor="#FF0000">  </td><td><img src="images/commercial.png"></img></td><td align="left">Commercial</td>
+  <td bgcolor="#FFFFFF">  </td><td><img src="images/directory.png"></img></td><td align="left">Directory</td>
+ </tr>
+ <tr>
+  <td bgcolor="#D8E4BC">  </td><td><img src="images/event.png"></img></td><td align="left">Event</td>
+  <td bgcolor="#F79646">  </td><td><img src="images/homegrown.png"></img></td><td align="left">Homegrown</td>
+  <td bgcolor="#FFFFFF">  </td><td><img src="images/file.png"></img></td><td align="left">File</td>
+  </tr>
+ <tr>
+  <td bgcolor="#FCD5B4">  </td><td><img src="images/org.png"></img></td><td align="left">Organization</td>
+  <td bgcolor="#9BBB59">  </td><td><img src="images/opensource.png"></img></td><td align="left">Open-source</td>
+  <td bgcolor="#FFFFFF">  </td><td><img src="images/folder.png"></img></td><td align="left">Folder</td>
+ </tr>
+ <tr>
+  <td bgcolor="#B8CCE4">  </td><td><img src="images/person.png"></img></td><td align="left">Person</td>
+  <td bgcolor="#4BACC6">  </td><td><img src="images/partner.png"></img></td><td align="left">Partner</td>
+  <td bgcolor="#FFFFFF">  </td><td><img src="images/queue.png"></img></td><td align="left">Queue</td>
+ </tr>
+ <tr>
+  <td bgcolor="#B7DEE8">  </td><td><img src="images/process.png"></img></td><td align="left">Process</td>
+  <td bgcolor="#D9D9D9">  </td><td><img src="images/system.png"></img></td><td align="left">System</td>
+  <td bgcolor="#FFFFFF">  </td><td><img src="images/repository.png"></img></td><td align="left">Repository</td>
+ </tr>
+ <tr>
+  <td colspan="9">
+   <table border="0" cellborder="0" cellspacing="0" >
+    <tr><td></td><td></td></tr> <tr><td align="right" border="1" bgcolor="#F0F0F0"><b>Source Data:</b></td><td align="left" border="1">Context Diagram Data.xlsx</td></tr> <tr><td align="right" border="1" bgcolor="#F0F0F0"><b>Author:</b></td><td align="left" border="1">Jeffrey Long</td></tr> <tr><td align="right" border="1" bgcolor="#F0F0F0"><b>Date:</b></td><td align="left" border="1">September 28, 2026</td></tr><tr><td></td><td></td></tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</font>> tooltip="Legend" ];
+        "Note 7" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Consumer Notifications\linvolving mobile text messages\land push notifications are\loutside the scope of this\lcontext diagram.\l" tooltip="Note 7" ];
+        "Note 8" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Use Case 1: Consumer has\lapplied for credit, and is\lwaiting to learn of the\ldecision.\l" tooltip="Note 8" ];
+        "Note 9" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Use Case 2: Sales and\lMarketing is running an email\lcampaign.\l" tooltip="Note 9" ];
+        "Note 7" -> "Note 8"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="invis" fontcolor="invis" labelfontsize="8" labelfontcolor="invis" penwidth="0.75" minlen="1" ];
+        "Note 8" -> "Note 9"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="invis" fontcolor="invis" labelfontsize="8" labelfontcolor="invis" penwidth="0.75" minlen="1" ];
+        subgraph "cluster_2" { penwidth="1" colorscheme="greys9" fillcolor="2" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Corporate Applications"
+            subgraph "cluster_3" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Business to Consumer"
+                "Consumer Notifications" [ shape="rectangle" height="1.125" width="1.125" fixedsize="true" gradientangle="90" fillcolor="White;0.85:#F79646" color="#F79646" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/homegrown.png" imagescale="False" imagepos="bc" peripheries="2" label="APP-10016\n\nConsumer\nNotifications" tooltip="Consumer Notifications: A service that helps create, send, and manage various types of notifications to customers, including mobile text message notifications, push notifications, and email notifications." ];
+                "System Timer" [ shape="rectangle" height="0.75" width="0.75" fixedsize="true" gradientangle="90" fillcolor="White;0.75:#D8E4BC" color="#D8E4BC" fontname="Calibri" fontsize="10" style="filled,rounded" fontcolor="black" labelloc="top" image="images/event.png" imagescale="False" imagepos="bc" label="Event\nSystem\nTimer" tooltip="System Timer: Runs once per minute to signal Consumer Notifications to check for tasks." ];
+                "Notification Queue" [ labelloc="top" shape="rectangle" height="0.625" width="0.75" fixedsize="True" fillcolor="transparent" color="transparent" penwidth="0.5" fontname="Calibri" fontsize="10" fontcolor="black" image="images/queue.png" imagescale="False" imagepos="bc" style="filled" label="Notification\nQueue" tooltip="Notification Queue: Stores and sequences notification messages until they are ready for delivery, ensuring they are processed in the correct order and at the appropriate time." ];
+                "Dead Letter Queue" [ labelloc="top" shape="rectangle" height="0.625" width="0.75" fixedsize="True" fillcolor="transparent" color="transparent" penwidth="0.5" fontname="Calibri" fontsize="10" fontcolor="black" image="images/queue.png" imagescale="False" imagepos="bc" style="filled" label="Dead\nLetter\nQueue" tooltip="Dead Letter Queue: Stores notification messages that could not be transmitted to the Marketing CRM, preserving them for inspection, retry, or remediation." ];
+                "App Log Files" [ shape="rectangle" height="0.625" width="0.75" fixedsize="true" fillcolor="transparent" color="transparent" fontcolor="black" fontname="Calibri" fontsize="10" style="filled" penwidth="0.5" image="images/file.png" imagescale="False" imagepos="bc" labelloc="top" label="App Log\nFiles" tooltip="App Log Files: Server‑generated log files containing diagnostic messages recorded during technical faults or unexpected application behavior." ];
+                "Notification History" [ shape="rectangle" height="0.625" width="0.75" fixedsize="true" fillcolor="transparent" color="transparent" fontcolor="black" fontname="Calibri" fontsize="10" style="filled" penwidth="0.5" image="images/database.png" imagescale="False" imagepos="bc" labelloc="top" label="Notification\nHistory" tooltip="Notification History: Retains request tracking numbers and delivery histories to support auditability, traceability, and compliance." ];
+                "Email Template Catalog" [ shape="rectangle" height="0.625" width="0.75" fixedsize="true" fillcolor="transparent" color="transparent" fontcolor="black" fontname="Calibri" fontsize="10" style="filled" penwidth="0.5" image="images/database.png" imagescale="False" imagepos="bc" labelloc="top" label="Email\nTemplate\nCatalog" tooltip="Email Template Catalog: Catalogs the names of email templates maintained within the Marketing CRM for campaign and notification use." ];
+                "Note 1" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Business application uses the\lConsumer Notifications\lapplication to send\lgraphics-rich emails to\lcustomers.\l" tooltip="Note 1" ];
+                "Note 2" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Four delivery attempts are\lmade. After four failures, the\lrequest moves to the Dead\lLetter Queue of manual\lresolution.\l" tooltip="Note 2" ];
+            }
+            subgraph "cluster_4" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Consumer Lending"
+                "Credit Application System" [ shape="rectangle" height="1.125" width="1.125" fixedsize="true" gradientangle="90" fillcolor="White;0.85:#F79646" color="#F79646" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/homegrown.png" imagescale="False" imagepos="bc" label="APP-10004\n\nCredit\nApplication\nSystem" tooltip="Credit Application System: An in-house application used to process customer credit applications, assess creditworthiness, and manage credit risk." ];
+                "Note 3" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="An in-house application used\lto process customer credit\lapplications, assess\lcreditworthiness, and manage\lcredit risk.\l" tooltip="Note 3" ];
+            }
+            subgraph "cluster_5" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Perimeter Network"
+                "Forward Proxy" [ shape="rectangle" height="1.125" width="1.125" fixedsize="True" gradientangle="90" fillcolor="White;0.85:#D9D9D9" color="#D9D9D9" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/system.png" imagescale="False" imagepos="bc" label="APP-10011\n\nForward\nProxy" tooltip="Forward Proxy: A type of proxy server that sits between a client and the internet, facilitating requests from the client to external servers." ];
+            }
+            subgraph "cluster_6" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Information Technology"
+                "System Administrator" [ labelloc="top" shape="rectangle" height="0.75" width="0.75" fixedsize="true" gradientangle="90" fillcolor="White;0.75:#B8CCE4" color="#B8CCE4" fontname="Calibri" fontsize="10" fontcolor="black" image="images/person.png" imagescale="False" imagepos="bc" style="filled,rounded" label="Person\nSystem\nAdministrator" tooltip="System Administrator: Administers the Consumer Notifications application, performing configuration, monitoring, and operational management tasks." ];
+                "Note 4" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="System Administrator creates\lemail templates in the\lMarketing CRM and catalogs\lthem in Consumer Notifications\lfor use.\l" tooltip="Note 4" ];
+            }
+            subgraph "cluster_7" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Marketing Department"
+                "Campaign Owner" [ labelloc="top" shape="rectangle" height="0.75" width="0.75" fixedsize="true" gradientangle="90" fillcolor="White;0.75:#B8CCE4" color="#B8CCE4" fontname="Calibri" fontsize="10" fontcolor="black" image="images/person.png" imagescale="False" imagepos="bc" style="filled,rounded" label="Person\nCampaign\nOwner" tooltip="Campaign Owner: Defines the email campaign and supplies the distribution list." ];
+                "Distribution List" [ shape="rectangle" height="0.625" width="0.75" fixedsize="true" fillcolor="transparent" color="transparent" fontcolor="black" fontname="Calibri" fontsize="10" style="filled" penwidth="0.5" image="images/file.png" imagescale="False" imagepos="bc" labelloc="top" label="Distribution\nList" tooltip="Distribution List: Contains email addresses and associated personalization values." ];
+                "Note 5" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Campaign Owner uploads the\ltargeted customer distribution\llist, selects the email\ltemplate, and designates when\ldelivery should occur.\l" tooltip="Note 5" ];
+            }
+        }
+        subgraph "cluster_8" { penwidth="1" colorscheme="greys9" fillcolor="2" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Internet"
+            subgraph "cluster_9" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Consumer's Home"
+                "Email Client" [ shape="rectangle" height="1.125" width="1.125" fixedsize="True" gradientangle="90" fillcolor="White;0.85:#9BBB59" color="#9BBB59" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/opensource.png" imagescale="False" imagepos="bc" label="APP-10014\n\nEmail\nClient" tooltip="Email Client: A software application that allows users to access, compose, and send email messages. It acts as the interface between the user and the mail server. Also known as a Mail User Agent." ];
+                Consumer [ labelloc="top" shape="rectangle" height="0.75" width="0.75" fixedsize="true" gradientangle="90" fillcolor="White;0.75:#B8CCE4" color="#B8CCE4" fontname="Calibri" fontsize="10" fontcolor="black" image="images/person.png" imagescale="False" imagepos="bc" style="filled,rounded" label="Person\nConsumer" tooltip="Consumer: The recipient of the email notification being sent." ];
+            }
+            subgraph "cluster_10" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Email Services"
+                "Mail Relay" [ shape="rectangle" height="1.125" width="1.125" fixedsize="True" gradientangle="90" fillcolor="White;0.85:#D9D9D9" color="#D9D9D9" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/system.png" imagescale="False" imagepos="bc" label="APP-10013\n\nMail Relay" tooltip="Mail Relay: A Simple Mail Transfer Protocol (SMTP) relay transfers email from one SMTP server to another over the internet until reaching the intended recipent." ];
+            }
+            subgraph "cluster_11" { penwidth="1" fillcolor="white" fontname="Calibri" fontsize="12" style="filled,rounded" labelloc="top" fontcolor="black" color="#B3B3B3" margin="12" label="Cloud Service Provider"
+                "Marketing CRM" [ shape="rectangle" height="1.125" width="1.125" fixedsize="true" gradientangle="90" fillcolor="White;0.85:#4F81BD" color="#4F81BD" fontname="Calibri" fontsize="10" style="filled" fontcolor="black" labelloc="top" image="images/cloud.png" imagescale="False" imagepos="bc" label="APP-10018\n\nMarketing\nCRM" tooltip="Marketing CRM: A Customer Relationship Management (CRM) platform focused on digital marketing automation and analytics that helps businesses manage their relationships with customers and execute marketing campaigns across various channels." ];
+                "Note 6" [ shape="note" fixedsize="false" fillcolor="LemonChiffon1" color="DarkGoldenrod1" penwidth="0.5" fontname="Calibri" fontsize="12" style="filled" label="Consumer Notifications\lapplication uses cloud-based\lSAAS software to compose and\ldeliver the message.\l" tooltip="Note 6" ];
+            }
+        }
+    }
+    "Credit Application System" -> "Consumer Notifications"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="REST\lAPIs\l" taillabel="ESB" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Notify\lcustomer\lof\ldecision\l" ];
+    "Consumer Notifications" -> "Forward Proxy"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="DarkGoldenrod1" fontcolor="black" headlabel="HTTPS\lREST\l" taillabel="Forward\lProxy\l" labelfontsize="8" penwidth="0.75" labelfontcolor="DarkGoldenrod1" label="Invoke\lcloud\lservice to\lsend email\l" ];
+    "Forward Proxy" -> "Marketing CRM"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="REST" taillabel="HTTPS" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Invoke\lcloud\lservice to\lsend email\l" ];
+    "Marketing CRM" -> "Mail Relay"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="Email" headlabel="SMTP" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Format\lappropriate\ltemplate\land\ltransmit\l" ];
+    "Mail Relay" -> "Email Client"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="Email" headlabel="SMTP" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Deliver\lemail to\lmailbox\l" ];
+    "Consumer Notifications" -> "Notification Queue"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="Sends\lTo\l" headlabel="Enqueue" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Add to\lsend queue\l" ];
+    "Consumer Notifications" -> "Notification Queue"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="Dequeue" taillabel="Gets\lFrom\l" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Release\lfrom send\lqueue\l" ];
+    "Consumer Notifications" -> "Dead Letter Queue"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="Sends\lTo\l" headlabel="Enqueue" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Add to\lerror\lresolution\lqueue\l" ];
+    "Consumer Notifications" -> "Dead Letter Queue"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="Dequeue" taillabel="Gets\lFrom\l" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Release\lfrom error\lresolution\lqueue\l" ];
+    "Consumer Notifications" -> "App Log Files"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="File\lIO\l" headlabel="Append" labelfontsize="8" labelfontcolor="ForestGreen" penwidth="0.75" label="Record\ltechnical\lfaults\l" ];
+    "Consumer Notifications" -> "Notification History"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="INSERT" taillabel="SQL" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Insert\levent\lrecord\l" ];
+    "Consumer Notifications" -> "Distribution List"[ fontname="Calibri" fontsize="8" style="solid" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="Read" taillabel="File\lIO\l" labelfontsize="8" labelfontcolor="ForestGreen" penwidth="0.75" label="Reads CSV\lfile,\lgenerates\lnotification\lrequests\l" ];
+    "Consumer Notifications" -> "Email Template Catalog"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="ForestGreen" fontcolor="black" headlabel="INSERT" taillabel="SQL" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Add new\ltemplate\lname to\lcatalog\l" ];
+    "Consumer Notifications" -> "Email Template Catalog"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="ForestGreen" fontcolor="black" taillabel="SQL" headlabel="SELECT" labelfontsize="8" penwidth="0.75" labelfontcolor="ForestGreen" label="Validate\lrequested\lnotification\ltemplate\lexists\l" ];
+    "Consumer" -> "Email Client"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#B8CCE4" penwidth="1.5" fontcolor="black" taillabel="Interacts\lWith\l" labelfontsize="8" labelfontcolor="#B8CCE4" dir="both" label="Read eMail\lnotification\l" ];
+    "System Administrator" -> "Consumer Notifications"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#B8CCE4" penwidth="1.5" fontcolor="black" taillabel="Interacts\lWith\l" labelfontsize="8" labelfontcolor="#B8CCE4" dir="both" label="Review\lqueues and\lapplication\llog files\l" ];
+    "System Administrator" -> "Marketing CRM"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#B8CCE4" penwidth="1.5" fontcolor="black" taillabel="Interacts\lWith\l" labelfontsize="8" labelfontcolor="#B8CCE4" dir="both" label="Build rich\lHTML email\ltemplates\lwithin\lMarketing\lCRM\lplatform.\l" ];
+    "System Timer" -> "Consumer Notifications"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#D8E4BC" penwidth="1.5" fontcolor="black" taillabel="Sends\lTo\l" labelfontsize="8" labelfontcolor="#D8E4BC" label="Check for\lpending\lrequests\l" ];
+    "System Administrator" -> "Consumer Notifications"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#B8CCE4" penwidth="1.5" fontcolor="black" taillabel="Sends\lTo\l" labelfontsize="8" labelfontcolor="#B8CCE4" label="Catalog\lCRM email\ltemplates\lin\ldatabase\l" ];
+    "Campaign Owner" -> "Consumer Notifications"[ fontname="Calibri" fontsize="8" arrowsize="0.5" color="#B8CCE4" penwidth="1.5" fontcolor="black" taillabel="Sends\lTo\l" labelfontsize="8" labelfontcolor="#B8CCE4" label="Upload\lemail\ldistribution\llist\l" ];
+}

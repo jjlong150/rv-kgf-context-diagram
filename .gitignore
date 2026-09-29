@@ -1,0 +1,3 @@
+# Excel lock files created while a workbook is open
+~$*.xlsx
+~$*.xlsm
