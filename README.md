@@ -1,23 +1,29 @@
 # Context Diagrams and AI Architecture Review for Relationship Visualizer
 
-Build IT system context diagrams in Excel, export them as an **RV-KGF** JSON knowledge graph, and have an AI model write an independent architecture assessment from them.
+Build IT [system context diagrams](https://en.wikipedia.org/wiki/System_context_diagram) in Excel, export them as an [RV-KGF](https://github.com/jjlong150/rv-kgf) JSON knowledge graph, and have an AI model write an independent architecture assessment from them.
 
-| | |
-|---|---|
-| **Relationship Visualizer website** | [exceltographviz.com](https://exceltographviz.com): documentation for the Excel workbook this toolkit is built on |
-| **Relationship Visualizer on GitHub** | [jjlong150/ExcelToGraphviz](https://github.com/jjlong150/ExcelToGraphviz): source code and releases |
-| **RV-KGF schema** | [jjlong150/rv-kgf](https://github.com/jjlong150/rv-kgf): the knowledge graph format the toolkit exports |
-| **Example assessment** | [Consumer Notifications report](examples/consumer-notifications/): a sample AI-generated architecture review |
+[![Latest Release v1.0.0](https://img.shields.io/badge/Latest%20Release-v1.0.0%20(28%20Sep%202026)-brightgreen)](README.md)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/exceltographviz)
+
+---
+This toolkit extends [Relationship Visualizer](https://exceltographviz.com), a free Excel workbook that draws diagrams with Graphviz. The toolkit has three parts:
+
+- **A data workbook** where you list actors, applications, data stores and the connections between them, along with facts about each one (data classification, PII, authentication, failure handling and more).
+- **A curated Relationship Visualizer style set** that turns each connection into a colored, labeled edge. Green means approved, amber means conditional or deprecated, and red means prohibited; a dashed line means a better alternative exists. 
+  
+  Each style also carries a description, and structured properties such as whether the protocol encrypts in transit.
+- **An architecture review prompt** that reads the exported knowledge graph and produces an assessment report. The report includes a component inventory, ratings for seven architecture qualities, a risk register, and mitigations 
 
 | ![Context diagram](examples/consumer-notifications/context-diagram.png) |
 | :---: |
 | *The Consumer Notifications example. Its data was deliberately seeded with errors to test the review; see the [example](examples/consumer-notifications/) for the AI-generated assessment.* |
 
-This toolkit extends [Relationship Visualizer](https://exceltographviz.com), a free Excel workbook that draws diagrams with Graphviz. It has three parts:
-
-- **A data workbook** where you list actors, applications, data stores and the connections between them, along with facts about each one (data classification, PII, authentication, failure handling and more).
-- **A curated style set** that turns each connection into a colored, labeled edge. Green means approved, amber means conditional or deprecated, and red means prohibited; a dashed line means a better alternative exists. Each style also carries structured properties, such as whether the protocol encrypts in transit.
-- **An architecture review prompt** that reads the exported knowledge graph and produces an assessment report. The report includes a component inventory, ratings for seven architecture qualities, a risk register, and mitigations.
+| Related Content | Description |
+|---|---|
+| [Relationship Visualizer website](https://exceltographviz.com) | Documentation for the Excel workbook this toolkit is built on. |
+| [Relationship Visualizer on GitHub](https://github.com/jjlong150/ExcelToGraphviz) | Relationship Visualizer source code and releases. |
+| [RV-KGF schema](https://github.com/jjlong150/rv-kgf)| Schema documentation of the *Relationship Visualizer Knowledge Graph Format* (i.e. the format of the JSON which the toolkit exports for AI review). |
 
 ## How it works
 
@@ -91,7 +97,7 @@ The review prompt sits on top as a reasoning layer. It applies rules to the know
 3. **Switch to the SQL worksheet.** If you're not using the default data workbook, select its folder and choose it from the list.
 4. **Press Run SQL.** The diagram is displayed. Check that it looks right before going further.
 5. **Open the knowledge graph.** On the **Data** ribbon tab, press **Knowledge Graph**. The JSON opens in your browser, where you can copy it or save it to a file. See [From Spreadsheet to Knowledge Graph](https://exceltographviz.com/blog/posts/knowledge-graph-export.html).
-6. **Run the review.** Give the knowledge graph and the [review prompt](prompts/Architecture_Design_Review_Prompt.md) to the AI of your choice. You get an architecture assessment report back.
+6. **Run the review.** Give the knowledge graph and the [review prompt](prompts/Architecture_Design_Review_Prompt.md) to the AI of your choice. You get an architecture assessment report back [(see example)](examples/consumer-notifications/).
 
 The [user guide](docs/user-guide.md#running-the-toolkit) explains each step in more detail.
 
